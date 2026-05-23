@@ -86,31 +86,35 @@
   
 /* card colors */
 
---svg-stroke-blue: hsl(240, 100%, 50%);
+--orange: hsl(39, 100%, 50%);
+--border-orange: hsl(39, 100%, 50%);
+--background-orange: hsla(39, 100%, 50%, 0.201);
+
+--stroke-blue: hsl(240, 100%, 50%);
 --border-blue: hsl(240, 100%, 50%);
 --background-blue: hsla(240, 100%, 50%, 0.201);
 
---svg-stroke-purple: hsl(300, 100%, 25%);
+--stroke-purple: hsl(300, 100%, 25%);
 --border-purple: hsl(300, 100%, 25%);
 --background-purple: hsla(300, 100%, 25%, 0.201);
 
---svg-stroke-light-blue: hsl(190, 100%, 50%);
+--stroke-light-blue: hsl(190, 100%, 50%);
 --border-light-blue: hsl(190, 100%, 50%);
 --background-light-blue: hsla(190, 100%, 50%, 0.201);
 
---svg-stroke-pink: hsl(350, 100%, 74%);
+--stroke-pink: hsl(350, 100%, 74%);
 --border-pink: hsl(350, 100%, 74%);
 --background-pink: hsla(350, 100%, 88%, 0.201);
 
---svg-stroke-red: hsl(350, 100%, 50%);
+--stroke-red: hsl(350, 100%, 50%);
 --border-red: hsl(350, 100%, 50%);
 --background-red: hsla(350, 100%, 50%, 0.201);
 
---svg-stroke-green: hsl(122, 100%, 27%);
+--stroke-green: hsl(122, 100%, 27%);
 --border-green: hsl(122, 100%, 27%);
 --background-green: hsla(122, 100%, 27%, 0.201);
 
---svg-stroke-grey: hsl(0, 0%, 36%);
+--stroke-grey: hsl(0, 0%, 36%);
 --border-grey: hsl(0, 0%, 36%);
 --background-grey: hsla(0, 0%, 33%, 0.201);
 
@@ -135,6 +139,7 @@ body {
   /* max-width for big screens no stretching, we can decide later what the exact value will be */
   max-width: 120rem;
   margin: 0 auto;
+  background-color: #000;
 
 
 
