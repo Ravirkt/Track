@@ -1,3 +1,37 @@
+<style>
+    .nav {
+        position: fixed;
+        right: 1.5rem;
+        bottom: 1.5rem;
+        transform: none;
+    }
+
+    .nav-list {
+        list-style: none;
+        position: relative;
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .nav-list li {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: transform 0.5s;
+    }
+
+    .nav-list li:first-child {
+        z-index: 10;
+    }
+
+    .nav-list li:not(:first-child) a {
+        pointer-events: none;
+    }
+    .nav:global(.open) .nav-list li:nth-child(1) {
+        transform: translateY(0px);
+    }
+    .nav:global(.open) .nav-list li:nth-child(2) {
+        transform: translateY(-49px);
         pointer-events: auto;
     }
 
