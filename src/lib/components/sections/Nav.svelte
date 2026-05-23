@@ -1,3 +1,27 @@
+<script>
+    import { LoginIcon, HamburgerIcon } from "$lib";
+
+    let open = $state(false);
+</script>
+
+<nav class="nav" class:open>
+    <ul class="nav-list">
+        <li>
+            <button
+                class="nav-item nav-trigger"
+                onclick={() => (open = !open)}
+            >
+                <HamburgerIcon />
+            </button>
+        </li>
+        <li><a href="/" class="nav-item"><LoginIcon /></a></li>
+        <li><a href="/" class="nav-item"><LoginIcon /></a></li>
+        <li><a href="/" class="nav-item"><LoginIcon /></a></li>
+        <li><a href="/" class="nav-item"><LoginIcon /></a></li>
+        <li><a href="/" class="nav-item"><LoginIcon /></a></li>
+    </ul>
+</nav>
+
 <style>
     .nav {
         position: fixed;
@@ -32,6 +56,21 @@
     }
     .nav:global(.open) .nav-list li:nth-child(2) {
         transform: translateY(-49px);
+    }
+    .nav:global(.open) .nav-list li:nth-child(3) {
+        transform: translateY(-98px);
+    }
+    .nav:global(.open) .nav-list li:nth-child(4) {
+        transform: translateY(-147px);
+    }
+    .nav:global(.open) .nav-list li:nth-child(5) {
+        transform: translateY(-196px);
+    }
+    .nav:global(.open) .nav-list li:nth-child(6) {
+        transform: translateY(-245px);
+    }
+
+    .nav:global(.open) .nav-list li:not(:first-child) a {
         pointer-events: auto;
     }
 
