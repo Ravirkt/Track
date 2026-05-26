@@ -1,5 +1,5 @@
 <script>
-    import { LoginIcon, HamburgerIcon } from "$lib";
+    import { LoginIcon, HamburgerIcon, DashboardIcon, CalenderIcon, UploadImageIcon } from "$lib";
 
     let open = $state(false);
 </script>
@@ -14,11 +14,11 @@
                 <HamburgerIcon />
             </button>
         </li>
-        <li><a href="/" class="nav-item"><LoginIcon /></a></li>
-        <li><a href="/" class="nav-item"><LoginIcon /></a></li>
-        <li><a href="/" class="nav-item"><LoginIcon /></a></li>
-        <li><a href="/" class="nav-item"><LoginIcon /></a></li>
-        <li><a href="/" class="nav-item"><LoginIcon /></a></li>
+        <li><a href="/dashboard" class="nav-item"><DashboardIcon /></a></li>
+        <li><a href="/progress" class="nav-item"><UploadImageIcon /></a></li>
+        <li><a href="/schedule" class="nav-item"><CalenderIcon /></a></li>
+        <!-- <li><a href="/" class="nav-item"><LoginIcon /></a></li>
+        <li><a href="/" class="nav-item"><LoginIcon /></a></li> -->
     </ul>
 </nav>
 
@@ -56,8 +56,10 @@
         transform: translateY(0px);
     }
     .nav:global(.open) .nav-list li:nth-child(2) {
+        transform: translateY(49px);
     }
     .nav:global(.open) .nav-list li:nth-child(3) {
+        transform: translateY(98px);
     }
     .nav:global(.open) .nav-list li:nth-child(4) {
         transform: translateY(147px);
