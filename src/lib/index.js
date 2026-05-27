@@ -26,3 +26,4 @@ export { default as Label } from "$lib/components/atoms/Label.svelte";
 export { default as HeaderTitle } from "$lib/components/atoms/HeaderTitle.svelte";
 export { default as HeaderSection } from "$lib/components/molecules/HeaderSection.svelte";
 export { default as ChartCard } from "$lib/components/organisms/ChartCard.svelte";
+export { default as StatCard } from "$lib/components/atoms/StatCard.svelte";
