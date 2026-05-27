@@ -25,3 +25,4 @@ export { default as ProgressForm } from "$lib/components/organisms/ProgressForm.
 export { default as Label } from "$lib/components/atoms/Label.svelte";
 export { default as HeaderTitle } from "$lib/components/atoms/HeaderTitle.svelte";
 export { default as HeaderSection } from "$lib/components/molecules/HeaderSection.svelte";
+export { default as ChartCard } from "$lib/components/organisms/ChartCard.svelte";
