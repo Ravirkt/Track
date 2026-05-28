@@ -9,6 +9,10 @@ export { default as HamburgerIcon } from "$lib/assets/svg/HamburgerIcon.svelte";
 export { default as CalenderIcon } from "$lib/assets/svg/CalenderIcon.svelte";
 export { default as DashboardIcon } from "$lib/assets/svg/DashboardIcon.svelte";
 export { default as UploadImageIcon } from "$lib/assets/svg/UploadImageIcon.svelte";
+export { default as ScaleIcon } from "$lib/assets/svg/ScaleIcon.svelte";
+export { default as BodyFatIcon } from "$lib/assets/svg/BodyFatIcon.svelte";
+export { default as WaistIcon } from "$lib/assets/svg/WaistIcon.svelte";
+export { default as HeartRateIcon } from "$lib/assets/svg/HeartRateIcon.svelte";
 
 
 export { default as TrophyIcon } from "$lib/assets/svg/TrophyIcon.svelte";
@@ -27,3 +31,4 @@ export { default as HeaderTitle } from "$lib/components/atoms/HeaderTitle.svelte
 export { default as HeaderSection } from "$lib/components/molecules/HeaderSection.svelte";
 export { default as ChartCard } from "$lib/components/organisms/ChartCard.svelte";
 export { default as StatCard } from "$lib/components/atoms/StatCard.svelte";
+export { default as FallBackChart } from "$lib/components/atoms/FallBackChart.svelte";
