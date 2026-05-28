@@ -10,9 +10,6 @@
     
 
     onMount(() => {
-    console.log('fallback canvas:', canvas)
-    // rest van de code
-
         new Chart(canvas, {
             type: "line",
             data: {
