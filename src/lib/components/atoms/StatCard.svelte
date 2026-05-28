@@ -13,13 +13,16 @@
     import { Chart } from "chart.js/auto";
     import { nonnegative } from "zod";
 
-    let { countValue, statCardTitle, count } = $props();
+    let { countValue, statCardTitle, count, statCardClass, Icon } = $props();
 </script>
 
-<article class="data-card">
+<article class="data-card {statCardClass}">
     <h3 class="card-title">
         {statCardTitle}
-        <TrophyIcon/>
+
+        {#if Icon}
+            <Icon class="icon" />
+        {/if}
     </h3>
 
     <p class="count">{count}<span>{countValue}</span></p>
@@ -30,7 +33,7 @@
         background-color: var(--card-background-color);
         padding: 1rem;
         font-family: var(--regular-font);
-        font-size: clamp(13px, 3vw, 16px);
+        font-size: clamp(12px, 3vw, 16px);
         display: flex;
         flex-direction: column;
         border-radius: var(--radius-sm);
@@ -61,7 +64,9 @@
     .count span {
         font-family: var(--regular-font);
         font-size: clamp(11px, 3vw, 12px);
-        color: var(--orange);
+        color: var(--blue);
         text-transform: uppercase;
     }
+
+    
 </style>
