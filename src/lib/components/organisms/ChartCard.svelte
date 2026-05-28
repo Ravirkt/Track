@@ -1,29 +1,21 @@
 <script>
     import {
-        TrophyIcon,
-        WeightIcon,
-        WorkoutIcon,
         MiniChart,
-        Label,
-        HeaderTitle,
-        HeaderSection,
     } from "$lib";
-    import { onMount } from "svelte";
-    import { Chart } from "chart.js/auto";
-    import { nonnegative } from "zod";
 
-    let { metricValue, analyticsCardIcon, analyticsCardTitle, chartData, chartLabels } = $props();
-
-
+    let { metricValue, analyticsCardTitle, chartData, chartLabels, Icon } =
+        $props();
 </script>
 
 <article class="analytics-card js-off">
-    <h4 class="analytics-card-title">{analyticsCardTitle} {analyticsCardIcon} <WorkoutIcon /></h4>
+    <h4 class="analytics-card-title">
+        {analyticsCardTitle}
+        {#if Icon}
+            <Icon class="icon" />
+        {/if}
+    </h4>
 
-    <MiniChart
-        data={chartData}
-        labels={chartLabels}
-    />
+    <MiniChart data={chartData} />
     <span class="value">{metricValue}</span>
 </article>
 
@@ -31,13 +23,9 @@
     <article class="analytics-card">
         <h4 class="analytics-card-title">{analyticsCardTitle}</h4>
         <ul>
-            <li>wk 1: 3 CM</li>
-            <li>wk 2: 5 CM</li>
-            <li>wk 3: 2 CM</li>
-            <li>wk 4: 4 CM</li>
-            <li>wk 5: 6 CM</li>
-            <li>wk 6: 3 CM</li>
-            <li>wk 7: 5 CM</li>
+            {#each chartData as value, i}
+                <li>{value}</li>
+            {/each}
         </ul>
     </article>
     <style>
@@ -92,5 +80,17 @@
     noscript ul li {
         color: var(--secondary-text-color);
         list-style: none;
+        color: var(--primary-text-color);
+        background-color: var(--green);
+        padding: 0.1rem;
+        font-size: clamp(9px, 2.8vw, 11px);
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    noscript ul {
+        display: flex;
+        flex-direction: row;
+        gap: 0.3rem;
     }
 </style>
