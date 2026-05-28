@@ -40,12 +40,13 @@
 </script>
 
 <div class="mini-chart-container">
-    {#if data.length === 0}
+    {#if data.every((chartdata) => chartdata === null)}
         <FallBackChart />
     {:else}
         <canvas bind:this={canvas} />
     {/if}
 </div>
+
 
 <style>
     .mini-chart-container {

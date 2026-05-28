@@ -86,11 +86,12 @@
         font-size: clamp(9px, 2.8vw, 11px);
         padding-left: 0.5rem;
         padding-right: 0.5rem;
+        width: fit-content;
     }
 
     noscript ul {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         gap: 0.3rem;
     }
 </style>

@@ -7,11 +7,16 @@
 
     let canvas;
 
+    
+
     onMount(() => {
+    console.log('fallback canvas:', canvas)
+    // rest van de code
+
         new Chart(canvas, {
             type: "line",
             data: {
-                labels: dummyLabels,
+                labels: Labels,
                 datasets: [
                     {
                         data: FallbackData,
@@ -42,6 +47,7 @@
 </script>
 
 <canvas bind:this={canvas}></canvas>
+
 
 <style>
     canvas {
