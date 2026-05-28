@@ -14,14 +14,12 @@
     /><path d="m9.6 14.4 4.8-4.8" /></svg
 >
 
-
-
 <style>
     svg {
         flex-shrink: 0;
         height: 14px;
         width: 14px;
         display: block;
-        color: var(--orange);
+        color: var(--blue);
     }
 </style>

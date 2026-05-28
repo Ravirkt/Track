@@ -21,6 +21,6 @@
         height: 14px;
         width: 14px;
         display: block;
-        color: var(--orange);
+        color: var(--blue);
     }
 </style>
