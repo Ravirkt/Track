@@ -2,7 +2,9 @@
     import { onMount } from "svelte";
     import { Chart } from "chart.js/auto";
 
-    let { data = [], labels = [] } = $props();
+    import { FallBackChart } from "$lib";
+
+    let { data = [], labels = ["7", "6", "5", "4", "3", "2", "1"] } = $props();
 
     let canvas;
 
@@ -38,12 +40,20 @@
 </script>
 
 <div class="mini-chart-container">
-    <canvas bind:this={canvas} />
+    {#if data.length === 0}
+        <FallBackChart />
+    {:else}
+        <canvas bind:this={canvas} />
+    {/if}
 </div>
 
 <style>
     .mini-chart-container {
         width: 100%;
+        height: 6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     canvas {
