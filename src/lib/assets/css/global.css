@@ -71,11 +71,10 @@
 
   /* ------------------------------------------ BOX SHADOW ------------------------------------------ */
 
-  --box-shadow-webkit: 0px 0px 15px -10px #000;
+  --box-shadow-webkit: 0px 0px 25px -10px #ffffff;
 
   /* ------------------------------------------ COLORS ------------------------------------------ */
 
-  
 
 
   --primary-text-color: hsl(0, 0%, 100%);
@@ -83,40 +82,22 @@
   --card-background-color: hsl(0, 0%, 100%);
   --section-background-color: hsla(0, 0%, 82%, 0.31);
   --secondary-text-color: hsl(0, 0%, 0%);
-  
-/* card colors */
 
---orange: hsl(39, 100%, 50%);
---border-orange: hsl(39, 100%, 50%);
---background-orange: hsla(39, 100%, 50%, 0.201);
+  /* card colors */
 
---stroke-blue: hsl(240, 100%, 50%);
---border-blue: hsl(240, 100%, 50%);
---background-blue: hsla(240, 100%, 50%, 0.201);
+  --orange: hsl(203, 100%, 50%);
+  --border-orange: hsl(39, 100%, 50%);
+  --background-orange: hsla(39, 100%, 50%, 0.201);
 
---stroke-purple: hsl(300, 100%, 25%);
---border-purple: hsl(300, 100%, 25%);
---background-purple: hsla(300, 100%, 25%, 0.201);
+  --blue: hsl(240, 100%, 50%);
+  --border-blue: hsl(240, 100%, 50%);
+  --background-blue: hsla(240, 100%, 50%, 0.776);
 
---stroke-light-blue: hsl(190, 100%, 50%);
---border-light-blue: hsl(190, 100%, 50%);
---background-light-blue: hsla(190, 100%, 50%, 0.201);
+  --green: hsl(122, 100%, 27%);
+  --border-green: hsl(122, 100%, 27%);
+  --background-green: hsla(122, 100%, 27%, 0.201);
 
---stroke-pink: hsl(350, 100%, 74%);
---border-pink: hsl(350, 100%, 74%);
---background-pink: hsla(350, 100%, 88%, 0.201);
 
---stroke-red: hsl(350, 100%, 50%);
---border-red: hsl(350, 100%, 50%);
---background-red: hsla(350, 100%, 50%, 0.201);
-
---stroke-green: hsl(122, 100%, 27%);
---border-green: hsl(122, 100%, 27%);
---background-green: hsla(122, 100%, 27%, 0.201);
-
---stroke-grey: hsl(0, 0%, 36%);
---border-grey: hsl(0, 0%, 36%);
---background-grey: hsla(0, 0%, 33%, 0.201);
 
   /* ---------------  */
 }
@@ -139,62 +120,61 @@ body {
   /* max-width for big screens no stretching, we can decide later what the exact value will be */
   max-width: 120rem;
   margin: 0 auto;
-  background-color: #000;
+  background-color: #434343;
+  color: var(--primary-text-color);
 
 
+  background-color: #000000;
+  opacity: 1;
+  background-image: linear-gradient(#ffffff1d 1px, transparent 1px), linear-gradient(to right, #ffffff1d 1px, #000000 1px);
+  background-size: 3rem 3rem;
 
-  .h1,
-  h1 {
-    font-size: clamp(46px, 8vw, 96px);
-    font-family: var(--headline-font);
-  }
-
-   .h2,
-  h2 {
-    font-size: clamp(18px, 3vw, 36px);
-    line-height: 1.3;
-    font-family: var(--light-font);
-  }
-
-   .h3,
-  h3 {
-    font-size: clamp(16px, 3vw, 21px);
-    line-height: 1.3;
-    font-family: var(--headline-font);
-  }
-
-   .h4,
-  h4 {
-    font-size: clamp(14px, 2.5vw, 18px);
-    /* line-height: 1.5; */
-    font-family: var(--headline-font);
-  }
-
-   .h5,
-  h5 {
-    font-size: clamp(14px, 2vw, 16px);
-    line-height: 1.6;
-    font-family: var(--headline-font);
-  }
-
-   .h6,
-  h6 {
-    font-size: clamp(12px, 1.5vw, 14px);
-    line-height: 1.4;
-    font-family: var(--headline-font);
-  }
-
-   .paragraph, p {
-    font-size: clamp(14px, 3vw, 20px);
-    line-height: 1.5;
-    font-family: var(--regular-font);
-  }
 }
 
-body {
-   .label {
-    font-size: clamp(14px, 3vw, 18px);
-    line-height: 1.5;
-    font-family: var(--body-font);
-  }
+.h1,
+h1 {
+  font-size: clamp(36px, 8vw, 58px);
+  font-family: var(--headline-font);
+}
+
+.h2,
+h2 {
+  font-size: clamp(18px, 3vw, 36px);
+  line-height: 1.3;
+  font-family: var(--light-font);
+}
+
+.h3,
+h3 {
+  font-size: clamp(16px, 3vw, 21px);
+  line-height: 1.3;
+  font-family: var(--headline-font);
+}
+
+.h4,
+h4 {
+  font-size: clamp(14px, 2.5vw, 18px);
+  /* line-height: 1.5; */
+  font-family: var(--headline-font);
+}
+
+.h5,
+h5 {
+  font-size: clamp(14px, 2vw, 16px);
+  line-height: 1.6;
+  font-family: var(--headline-font);
+}
+
+.h6,
+h6 {
+  font-size: clamp(12px, 1.5vw, 14px);
+  line-height: 1.4;
+  font-family: var(--headline-font);
+}
+
+.paragraph,
+p {
+  font-size: clamp(14px, 3vw, 20px);
+  line-height: 1.5;
+  font-family: var(--regular-font);
 }
