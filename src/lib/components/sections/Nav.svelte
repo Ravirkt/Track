@@ -17,9 +17,9 @@
                 <HamburgerIcon />
             </button>
         </li>
-        <li><a href="/dashboard" class="nav-item" aria-label="Dashboard page" name="Dashboard page"><DashboardIcon /></a></li>
-        <li><a href="/progress" class="nav-item" aria-label="Post progress page" name="Post progress page"><UploadImageIcon /></a></li>
-        <li><a href="/schedule" class="nav-item" aria-label="Schedule page" name="Schedule page"><CalenderIcon /></a></li>
+        <li><a href="/dashboard" class="nav-item" aria-label="Dashboard page"><DashboardIcon /></a></li>
+        <li><a href="/progress" class="nav-item" aria-label="Post progress page"><UploadImageIcon /></a></li>
+        <li><a href="/schedule" class="nav-item" aria-label="Schedule page"><CalenderIcon /></a></li>
     </ul>
 </nav>
 
