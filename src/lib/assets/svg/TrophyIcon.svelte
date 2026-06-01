@@ -6,6 +6,7 @@
     stroke-width="2"
     stroke-linecap="round"
     stroke-linejoin="round"
+    aria-hidden="true" focusable="false"
     class="lucide lucide-trophy-icon lucide-trophy"
     ><path d="M10 14.66v1.626a2 2 0 0 1-.976 1.696A5 5 0 0 0 7 21.978" /><path
         d="M14 14.66v1.626a2 2 0 0 0 .976 1.696A5 5 0 0 1 17 21.978"

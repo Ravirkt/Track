@@ -6,6 +6,7 @@
     stroke-width="2"
     stroke-linecap="round"
     stroke-linejoin="round"
+    aria-hidden="true" focusable="false"
     class="lucide lucide-ruler-dimension-line-icon lucide-ruler-dimension-line"
     ><path d="M10 15v-3" /><path d="M14 15v-3" /><path d="M18 15v-3" /><path
         d="M2 8V4"

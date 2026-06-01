@@ -8,6 +8,7 @@
     stroke-width="2"
     stroke-linecap="round"
     stroke-linejoin="round"
+    aria-hidden="true" focusable="false"
     class="lucide lucide-arrow-down01-icon lucide-arrow-down-0-1"
     ><path d="m3 16 4 4 4-4" /><path d="M7 20V4" /><rect
         x="15"
