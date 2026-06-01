@@ -6,6 +6,8 @@
     stroke-width="2"
     stroke-linecap="round"
     stroke-linejoin="round"
+    aria-hidden="true"
+    focusable="false"
     class="lucide lucide-user-key-icon lucide-user-key"
     ><path d="M20 11v6" /><path d="M20 13h2" /><path
         d="M3 21v-2a4 4 0 0 1 4-4h6a4 4 0 0 1 2.072.578"

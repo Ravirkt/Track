@@ -6,6 +6,8 @@
     stroke-width="2"
     stroke-linecap="round"
     stroke-linejoin="round"
+    aria-hidden="true"
+    focusable="false"
     class="lucide lucide-calendar-days-icon lucide-calendar-days"
     ><path d="M8 2v4" /><path d="M16 2v4" /><rect
         width="18"

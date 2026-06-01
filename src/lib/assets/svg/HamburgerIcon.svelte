@@ -6,6 +6,8 @@
     stroke-width="2"
     stroke-linecap="round"
     stroke-linejoin="round"
+    aria-hidden="true"
+    focusable="false"
     class="lucide lucide-menu-icon lucide-menu"
     ><path d="M4 5h16" /><path d="M4 12h16" /><path d="M4 19h16" /></svg
 >

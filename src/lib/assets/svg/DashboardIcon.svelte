@@ -6,6 +6,8 @@
     stroke-width="2"
     stroke-linecap="round"
     stroke-linejoin="round"
+    aria-hidden="true"
+    focusable="false"
     class="lucide lucide-layout-dashboard-icon lucide-layout-dashboard"
     ><rect width="7" height="9" x="3" y="3" rx="1" /><rect
         width="7"
@@ -21,9 +23,6 @@
         rx="1"
     /></svg
 >
-
-
-
 
 <style>
     svg {
