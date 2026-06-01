@@ -1,19 +1,39 @@
 <script>
-    import {
-        MiniChart,
-    } from "$lib";
+    import { MiniChart } from "$lib";
+    import { onMount } from "svelte";
 
-    let { metricValue, analyticsCardTitle, chartData, chartLabels, Icon } =
-        $props();
+    let {
+        metricValue,
+        analyticsCardTitle,
+        chartData,
+        chartLabels,
+        Icon,
+        headingLevel,
+        headingText,
+        headingTitleClass,
+    } = $props();
+
+    import HeaderTitle from "../atoms/HeaderTitle.svelte";
+    import HeadingTitle from "../atoms/HeadingTitle.svelte";
+
+    let javascriptOn = $state(false);
+
+    onMount(() => {
+        javascriptOn = true;
+    });
 </script>
 
-<article class="analytics-card js-off">
-    <h4 class="analytics-card-title">
-        {analyticsCardTitle}
+<article class="analytics-card" class:js-off={!javascriptOn}>
+    <div class="analytics-card-title">
+        <HeadingTitle
+            {headingText}
+            className={headingTitleClass}
+            level={headingLevel}
+        />
         {#if Icon}
             <Icon class="icon" />
         {/if}
-    </h4>
+    </div>
 
     <MiniChart data={chartData} />
     <span class="value">{metricValue}</span>
@@ -21,21 +41,24 @@
 
 <noscript>
     <article class="analytics-card">
-        <h4 class="analytics-card-title">{analyticsCardTitle}</h4>
+        <HeadingTitle
+            {headingText}
+            className={headingTitleClass}
+            level={headingLevel}
+        />
         <ul>
             {#each chartData as value, i}
                 <li>{value}</li>
             {/each}
         </ul>
     </article>
-    <style>
-        .js-off {
-            display: none;
-        }
-    </style>
 </noscript>
 
 <style>
+    .js-off {
+        display: none;
+    }
+
     .analytics-card {
         background-color: var(--card-background-color);
         font-family: var(--regular-font);
