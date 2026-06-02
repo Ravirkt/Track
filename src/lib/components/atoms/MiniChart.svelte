@@ -7,7 +7,7 @@
         LinearScale,
         CategoryScale,
         Filler,
-        Tooltip
+        Tooltip,
     } from "chart.js";
 
     Chart.register(
@@ -17,7 +17,7 @@
         LinearScale,
         CategoryScale,
         Filler,
-        Tooltip
+        Tooltip,
     );
 
     import { onMount } from "svelte";
@@ -76,9 +76,10 @@
     {:else}
         <canvas
             bind:this={canvas}
-            rol="image"
-            aria-label="Analytics chart for {ariaLabelChartName}" loading="lazy"
-        />
+            role="img"
+            aria-label="Analytics chart for {ariaLabelChartName}"
+            loading="lazy"
+        ></canvas>
         <table class="visually-hidden">
             <caption>Chart data over the last 7 weeks</caption>
             <thead>
