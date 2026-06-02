@@ -19,7 +19,6 @@
     } from "$lib";
 
     let { data } = $props();
-
     let chartCards = $derived([
         {
             metricValue: "KG",
