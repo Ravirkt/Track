@@ -8,8 +8,20 @@
     stroke-linejoin="round"
     aria-hidden="true"
     focusable="false"
-    class="lucide lucide-menu-icon lucide-menu"
-    ><path d="M4 5h16" /><path d="M4 12h16" /><path d="M4 19h16" /></svg
+    class="lucide lucide-layout-dashboard-icon lucide-layout-dashboard"
+    ><rect width="7" height="9" x="3" y="3" rx="1" /><rect
+        width="7"
+        height="5"
+        x="14"
+        y="3"
+        rx="1"
+    /><rect width="7" height="9" x="14" y="12" rx="1" /><rect
+        width="7"
+        height="5"
+        x="3"
+        y="16"
+        rx="1"
+    /></svg
 >
 
 <style>
