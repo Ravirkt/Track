@@ -139,9 +139,9 @@ h1 {
 
 .h2,
 h2 {
-  font-size: clamp(18px, 3vw, 36px);
+  font-size: clamp(16px, 3vw, 21px);
   line-height: 1.3;
-  font-family: var(--light-font);
+  font-family: var(--headline-font);
 }
 
 .h3,
@@ -154,7 +154,6 @@ h3 {
 .h4,
 h4 {
   font-size: clamp(14px, 2.5vw, 18px);
-  /* line-height: 1.5; */
   font-family: var(--headline-font);
 }
 
