@@ -32,3 +32,6 @@ export { default as HeaderSection } from "$lib/components/molecules/HeaderSectio
 export { default as ChartCard } from "$lib/components/organisms/ChartCard.svelte";
 export { default as StatCard } from "$lib/components/atoms/StatCard.svelte";
 export { default as FallBackChart } from "$lib/components/atoms/FallBackChart.svelte";
+export { default as ExerciseRow } from "$lib/components/organisms/ExerciseRow.svelte";
+export { default as NotificationRow } from "$lib/components/organisms/NotificationRow.svelte";
+export { default as HeadingTitle } from "$lib/components/atoms/HeadingTitle.svelte";
