@@ -8,22 +8,35 @@
         HeaderTitle,
         HeaderSection,
         ChartCard,
+        HeadingTitle,
     } from "$lib";
-    import { onMount } from "svelte";
-    import { Chart } from "chart.js/auto";
-    import { nonnegative } from "zod";
 
-    let { countValue, statCardTitle, count, statCardClass, Icon } = $props();
+    let {
+        countValue,
+        statCardTitle,
+        count,
+        statCardClass,
+        Icon,
+        headingText,
+        headingTitleClass,
+        headingLevel,
+    } = $props();
 </script>
 
+<!-- h3 -->
+
 <article class="data-card {statCardClass}">
-    <h3 class="card-title">
-        {statCardTitle}
+    <div class="card-title">
+        <HeadingTitle
+            {headingText}
+            className={headingTitleClass}
+            level={headingLevel}
+        />
 
         {#if Icon}
             <Icon class="icon" />
         {/if}
-    </h3>
+    </div>
 
     <p class="count">{count}<span>{countValue}</span></p>
 </article>
@@ -67,6 +80,4 @@
         color: var(--blue);
         text-transform: uppercase;
     }
-
-    
 </style>

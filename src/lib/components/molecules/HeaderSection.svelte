@@ -5,7 +5,7 @@
 </script>
 
 <header class="header-container">
-    <HeaderTitle spanOne="{spanOne}" spanTwo="{spanTwo}" />
+    <HeaderTitle spanOne={spanOne} spanTwo={spanTwo} />
     <Label {labelText} />
 </header>
 

@@ -1,6 +1,4 @@
 <script>
-    // import { Label } from "$lib";
-
     let { spanOne, spanTwo } = $props();
 </script>
 
@@ -18,6 +16,6 @@
     }
 
     h1 span:nth-child(2) {
-        color: var(--orange);
+        color: var(--blue);
     }
 </style>
