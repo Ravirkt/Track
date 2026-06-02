@@ -19,12 +19,69 @@
     } from "$lib";
 
     let { data } = $props();
-    let { user, pictures, weights, waists, bodyfats, heartrates } = data;
+
+    let chartCards = [
+        {
+            metricValue: "KG",
+            chartData: data.weights,
+            Icon: ScaleIcon,
+            headingText: "Weight",
+            ariaLabelChartName: "Weight",
+        },
+        {
+            metricValue: "%",
+            chartData: data.bodyfats,
+            Icon: BodyFatIcon,
+            headingText: "Bodyfat",
+            ariaLabelChartName: "Bodyfat",
+        },
+        {
+            metricValue: "CM",
+            chartData: data.waists,
+            Icon: WaistIcon,
+            headingText: "Waist",
+            ariaLabelChartName: "Waist",
+        },
+        {
+            metricValue: "BPM",
+            chartData: data.heartrates,
+            Icon: HeartRateIcon,
+            headingText: "Heartrate (rest)",
+            ariaLabelChartName: "Heartrate (rest)",
+        },
+    ];
+
+    const statCards = [
+        {
+            count: data.user.start_weight,
+            countValue: "KG",
+            Icon: ScaleIcon,
+            headingText: "Start weight",
+        },
+        {
+            count: data.user.start_bodyfat,
+            countValue: "%",
+            Icon: BodyFatIcon,
+            headingText: "Bodyfat",
+        },
+        {
+            count: data.user.start_waist,
+            countValue: "CM",
+            Icon: WaistIcon,
+            headingText: "Waist",
+        },
+        {
+            count: data.user.resting_heart_rate,
+            countValue: "BPM",
+            Icon: HeartRateIcon,
+            headingText: "Heartrate (rest)",
+        },
+    ];
 </script>
 
 <HeaderSection
     spanOne="Goodmorning"
-    spanTwo="{user.name} {user.lastname}"
+    spanTwo="{data.user.name} {data.user.lastname}"
     labelText="Dashboard"
 />
 
@@ -37,38 +94,16 @@
         />
 
         <div class="card-container">
-            <StatCard
-                count={user.start_weight}
-                countValue="Kg"
-                Icon={ScaleIcon}
-                headingLevel="h3"
-                headingText="Start weight"
-                headingTitleClass="card-title"
-            />
-            <StatCard
-                count={user.start_bodyfat}
-                countValue="%"
-                Icon={BodyFatIcon}
-                headingLevel="h3"
-                headingText="Bodyfat"
-                headingTitleClass="card-title"
-            />
-            <StatCard
-                count={user.start_waist}
-                countValue="CM"
-                Icon={WaistIcon}
-                headingLevel="h3"
-                headingText="Waist"
-                headingTitleClass="card-title"
-            />
-            <StatCard
-                count={user.resting_heart_rate}
-                countValue="BPM"
-                Icon={HeartRateIcon}
-                headingLevel="h3"
-                headingText="Heartrate (rest)"
-                headingTitleClass="card-title"
-            />
+            {#each statCards as card}
+                <StatCard
+                    count={card.count}
+                    countValue={card.countValue}
+                    Icon={card.Icon}
+                    headingLevel="h3"
+                    headingText={card.headingText}
+                    headingTitleClass="card-title"
+                />
+            {/each}
         </div>
     </section>
 
@@ -80,43 +115,17 @@
         />
 
         <div class="analytics-container">
-            <ChartCard
-                metricValue="KG"
-                chartData={weights}
-                Icon={ScaleIcon}
-                headingLevel="h4"
-                headingText="Weight"
-                headingTitleClass="analytics-card-title"
-                ariaLabelChartName="Weight"
-            />
-            <ChartCard
-                metricValue="%"
-                chartData={bodyfats}
-                Icon={BodyFatIcon}
-                headingLevel="h4"
-                headingText="Bodyfat"
-                headingTitleClass="analytics-card-title"
-                ariaLabelChartName="Bodyfat"
-            />
-
-            <ChartCard
-                metricValue="CM"
-                chartData={waists}
-                Icon={WaistIcon}
-                headingLevel="h4"
-                headingText="Waist"
-                headingTitleClass="analytics-card-title"
-                ariaLabelChartName="Waist"
-            />
-            <ChartCard
-                metricValue="BPM"
-                chartData={heartrates}
-                Icon={HeartRateIcon}
-                headingLevel="h4"
-                headingText="Heartrate (rest)"
-                headingTitleClass="analytics-card-title"
-                ariaLabelChartName="Heartrate (rest)"
-            />
+            {#each chartCards as card}
+                <ChartCard
+                    metricValue={card.metricValue}
+                    chartData={card.chartData}
+                    Icon={card.Icon}
+                    headingLevel="h4"
+                    headingText={card.headingText}
+                    headingTitleClass="analytics-card-title"
+                    ariaLabelChartName={card.ariaLabelChartName}
+                />
+            {/each}
         </div>
     </section>
 
@@ -348,6 +357,8 @@
             grid-template-rows: auto;
         }
     }
+
+    .workout-container,
     .notifications-container {
         padding: 1rem;
         background-color: var(--card-background-color);
