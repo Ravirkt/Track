@@ -20,7 +20,7 @@
 
     let { data } = $props();
 
-    let chartCards = [
+    let chartCards = $derived([
         {
             metricValue: "KG",
             chartData: data.weights,
@@ -49,9 +49,9 @@
             headingText: "Heartrate (rest)",
             ariaLabelChartName: "Heartrate (rest)",
         },
-    ];
+    ]);
 
-    const statCards = [
+    let statCards = $derived([
         {
             count: data.user.start_weight,
             countValue: "KG",
@@ -76,7 +76,7 @@
             Icon: HeartRateIcon,
             headingText: "Heartrate (rest)",
         },
-    ];
+    ]);
 </script>
 
 <HeaderSection
