@@ -7,6 +7,7 @@
         LinearScale,
         CategoryScale,
         Filler,
+        Tooltip
     } from "chart.js";
 
     Chart.register(
@@ -16,10 +17,10 @@
         LinearScale,
         CategoryScale,
         Filler,
+        Tooltip
     );
 
     import { onMount } from "svelte";
-
     import { FallBackChart } from "$lib";
 
     let {
