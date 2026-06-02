@@ -25,7 +25,7 @@ export { default as ProgressPic } from "$lib/assets/img/ProgressPic.webp";
 // Components
 export { default as Nav } from "$lib/components/sections/Nav.svelte";
 export { default as MiniChart } from "$lib/components/atoms/MiniChart.svelte";
-export { default as ProgressForm } from "$lib/components/organisms/ProgressForm.svelte";
+// export { default as ProgressForm } from "$lib/components/organisms/ProgressForm.svelte";
 export { default as Label } from "$lib/components/atoms/Label.svelte";
 export { default as HeaderTitle } from "$lib/components/atoms/HeaderTitle.svelte";
 export { default as HeaderSection } from "$lib/components/molecules/HeaderSection.svelte";
