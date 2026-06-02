@@ -1,12 +1,33 @@
 <script>
+    import {
+        Chart,
+        LineController,
+        LineElement,
+        PointElement,
+        LinearScale,
+        CategoryScale,
+        Filler,
+    } from "chart.js";
+
+    Chart.register(
+        LineController,
+        LineElement,
+        PointElement,
+        LinearScale,
+        CategoryScale,
+        Filler,
+    );
+
     import { onMount } from "svelte";
-    import { Chart } from "chart.js/auto";
 
     import { FallBackChart } from "$lib";
 
-    let { data = [], labels = ["7", "6", "5", "4", "3", "2", "1"] } = $props();
-
-    let canvas;
+    let {
+        canvas,
+        data = [],
+        labels = ["7", "6", "5", "4", "3", "2", "1"],
+        ariaLabelChartName,
+    } = $props();
 
     onMount(() => {
         new Chart(canvas, {
@@ -27,6 +48,15 @@
                 ],
             },
             options: {
+                animations: {
+                    tension: {
+                        duration: 1500,
+                        easing: "linear",
+                        from: 0,
+                        to: 1,
+                        loop: true,
+                    },
+                },
                 responsive: true,
                 maintainAspectRatio: false,
                 plugins: { legend: { display: false } },
@@ -43,10 +73,30 @@
     {#if data.every((chartdata) => chartdata === null)}
         <FallBackChart />
     {:else}
-        <canvas bind:this={canvas} />
+        <canvas
+            bind:this={canvas}
+            rol="image"
+            aria-label="Analytics chart for {ariaLabelChartName}" loading="lazy"
+        />
+        <table class="visually-hidden">
+            <caption>Chart data over the last 7 weeks</caption>
+            <thead>
+                <tr>
+                    <th>Week</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                {#each data as value, i}
+                    <tr>
+                        <td>{labels[i]}</td>
+                        <td>{value}</td>
+                    </tr>
+                {/each}
+            </tbody>
+        </table>
     {/if}
 </div>
-
 
 <style>
     .mini-chart-container {
@@ -59,5 +109,14 @@
 
     canvas {
         width: 100%;
+    }
+
+    .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
     }
 </style>

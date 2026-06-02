@@ -1,13 +1,29 @@
 <script>
+    import {
+        Chart,
+        LineController,
+        LineElement,
+        PointElement,
+        LinearScale,
+        CategoryScale,
+        Filler,
+    } from "chart.js";
+
+    Chart.register(
+        LineController,
+        LineElement,
+        PointElement,
+        LinearScale,
+        CategoryScale,
+        Filler,
+    );
+
     import { onMount } from "svelte";
-    import { Chart } from "chart.js/auto";
 
     let FallbackData = [65, 68, 64, 70, 67, 72, 69];
     let Labels = ["1", "2", "3", "4", "5", "6", "7"];
 
     let canvas;
-
-    
 
     onMount(() => {
         new Chart(canvas, {
@@ -44,7 +60,6 @@
 </script>
 
 <canvas bind:this={canvas}></canvas>
-
 
 <style>
     canvas {
