@@ -348,4 +348,24 @@
             grid-template-rows: auto;
         }
     }
+    .notifications-container {
+        padding: 1rem;
+        background-color: var(--card-background-color);
+        border-radius: var(--radius-sm);
+        box-shadow: var(--box-shadow-webkit);
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        overflow: scroll;
+        max-height: 20rem;
+    }
+
+    .exercise-row,
+    .notification-row {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.8rem;
+        border-bottom: 2px solid black;
+    }
 </style>
