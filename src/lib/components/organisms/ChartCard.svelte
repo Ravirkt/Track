@@ -10,7 +10,7 @@
         headingLevel,
         headingText,
         headingTitleClass,
-        ariaLabelChartName
+        ariaLabelChartName,
     } = $props();
 
     import HeaderTitle from "../atoms/HeaderTitle.svelte";
@@ -35,7 +35,7 @@
         {/if}
     </div>
 
-    <MiniChart data={chartData} ariaLabelChartName={ariaLabelChartName}  />
+    <MiniChart data={chartData} {ariaLabelChartName} />
     <span class="value">{metricValue}</span>
 </article>
 
