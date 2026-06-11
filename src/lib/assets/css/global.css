@@ -78,14 +78,13 @@
 
 
   --primary-text-color: hsl(0, 0%, 100%);
+  --secondary-text-color: hsl(0, 0%, 0%);
 
   --card-background-color: hsl(0, 0%, 100%);
   --section-background-color: hsla(0, 0%, 82%, 0.31);
-  --secondary-text-color: hsl(0, 0%, 0%);
 
   /* card colors */
 
-  --orange: hsl(203, 100%, 50%);
   --border-orange: hsl(39, 100%, 50%);
   --background-orange: hsla(39, 100%, 50%, 0.201);
 
@@ -97,15 +96,38 @@
   --border-green: hsl(122, 100%, 27%);
   --background-green: hsla(122, 100%, 27%, 0.201);
 
+  --background-gradient-one: hsla(0, 0%, 100%, 0.114);
+  --background-gradient-two: hsl(0, 0%, 0%);
 
 
   /* ---------------  */
 }
 
 /* dark light mode based on system settings */
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
-    /* dark mode stuff */
+
+    --primary-text-color: hsl(0, 0%, 100%);
+    --secondary-text-color: hsl(0, 0%, 0%);
+
+    --card-background-color: hsl(0, 0%, 100%);
+    --section-background-color: hsla(0, 0%, 82%, 0.31);
+    /* card colors */
+
+    --border-orange: hsl(39, 100%, 50%);
+    --background-orange: hsla(39, 100%, 50%, 0.201);
+
+    --blue: hsl(240, 100%, 50%);
+    --border-blue: hsl(240, 100%, 50%);
+    --background-blue: hsla(240, 100%, 50%, 0.776);
+
+    --green: hsl(122, 100%, 27%);
+    --border-green: hsl(122, 100%, 27%);
+    --background-green: hsla(122, 100%, 27%, 0.201);
+
+    --background-gradient-one: hsl(0, 0%, 0%);
+    --background-gradient-two: hsla(0, 0%, 100%, 0.445);
+
   }
 }
 
@@ -120,13 +142,12 @@ body {
   /* max-width for big screens no stretching, we can decide later what the exact value will be */
   max-width: 120rem;
   margin: 0 auto;
-  background-color: #434343;
   color: var(--primary-text-color);
 
 
   background-color: #000000;
   opacity: 1;
-  background-image: linear-gradient(#ffffff1d 1px, transparent 1px), linear-gradient(to right, #ffffff1d 1px, #000000 1px);
+  background-image: linear-gradient(var(--background-gradient-one) 1px, transparent 1px), linear-gradient(to right, var(--background-gradient-one) 1px, var(--background-gradient-two) 1px);
   background-size: 3rem 3rem;
 
 }
